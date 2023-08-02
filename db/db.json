@@ -2,6 +2,11 @@
     {
         "title": "Test Title",
         "text": "Test text",
-        "note_id": "12345"
+        "note_id": "c83c28af-9197-4f2f-b119-03236ecfc0b6"
+    },
+    {
+        "title": "Test Note",
+        "text": "Hello world\n",
+        "note_id": "c0c42268-29e3-43af-89e0-64f3cacb8a44"
     }
 ]

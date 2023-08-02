@@ -1,10 +1,13 @@
 const express = require('express');
 const path = require('path');
+const { clog } = require('./middleware/clog');
 const api = require('./routes/index');
 
 const PORT = process.env.PORT || 3001;
 
 const app = express();
+
+app.use(clog);
 
 // For parsing JSON and url encoded data
 app.use(express.json());
@@ -19,8 +22,8 @@ app.get('/', (req, res) =>
 );
 
 // GET route for notes page
-app.get('/feedback', (req, res) =>
-  res.sendFile(path.join(__dirname, '/public/page/notes.html'))
+app.get('/notes', (req, res) =>
+  res.sendFile(path.join(__dirname, '/public/pages/notes.html'))
 );
 
 app.listen(PORT, () =>

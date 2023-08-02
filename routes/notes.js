@@ -22,7 +22,7 @@ notes.get('/', (req, res) => {
 // DELETE route for a specific note
 notes.delete(':note_id', (req, res) => {
   const noteId = req.params.note_id;
-  readFromFile('./db/tips.json')
+  readFromFile('./db/db.json')
     .then((data) => JSON.parse(data))
     .then((json) => {
       // Make a new array of all tips except the one with the ID provided in the URL
@@ -36,7 +36,7 @@ notes.delete(':note_id', (req, res) => {
     });
 });
 
-tips.post('/', (req, res) => {
+notes.post('/', (req, res) => {
   console.log(req.body);
 
   const { title, text } = req.body;
