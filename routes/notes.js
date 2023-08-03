@@ -6,8 +6,13 @@ const {
   writeToFile,
 } = require('../helpers/fsUtils');
 
-// GET route for retrieving all notes
+// GET Route for retrieving all the notes
 notes.get('/', (req, res) => {
+  readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)));
+});
+
+// GET route for retrieving specific note notes
+notes.get('/:tip_id', (req, res) => {
   const noteId = req.params.note_id;
   readFromFile('./db/db.json')
     .then((data) => JSON.parse(data))
@@ -20,7 +25,7 @@ notes.get('/', (req, res) => {
 });
 
 // DELETE route for a specific note
-notes.delete(':note_id', (req, res) => {
+notes.delete('/:note_id', (req, res) => {
   const noteId = req.params.note_id;
   readFromFile('./db/db.json')
     .then((data) => JSON.parse(data))
