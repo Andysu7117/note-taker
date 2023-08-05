@@ -13,7 +13,7 @@ The most difficult part of this project was getting the delete route to work and
 
 ## Installation
 
-To install the application you can either download the repository and run it locally or go to the following Heroku webpage (insert heroku webpage).
+To install the application you can either download the repository and run it locally or go to the following Heroku webpage [https://andy-notetaker-app-2c151c763130.herokuapp.com/](https://andy-notetaker-app-2c151c763130.herokuapp.com/).
 If running locally you will have to install node.js, this project was made using node.js v16.20.1 which can be found [here](https://nodejs.org/en/blog/release/v16.20.1).
 All the dependencies are listed in the package.json so once Node.json has been installed, you will just have to go (npm install) when you have entered into the local repository in command line.
 As shown in the following screenshot:
